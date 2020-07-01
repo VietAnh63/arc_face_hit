@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2272ff1e-b6f3-4754-a34e-43c80f0e85ba" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XgvK0A6nRQqRjiWerUguF5ISdE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RunManager" selected="Python.NhanDien">
+    <configuration name="NhanDien" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Recog_LandMark1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NhanDien.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Recog_LandMark1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.NhanDien" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2272ff1e-b6f3-4754-a34e-43c80f0e85ba" name="Default Changelist" comment="" />
+      <created>1581480484033</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581480484033</updated>
+      <workItem from="1581480488064" duration="1659000" />
+      <workItem from="1581482863796" duration="387000" />
+      <workItem from="1581483405405" duration="107000" />
+      <workItem from="1581484006474" duration="410000" />
+      <workItem from="1581484970209" duration="619000" />
+      <workItem from="1581486097506" duration="1101000" />
+      <workItem from="1581510671472" duration="2864000" />
+      <workItem from="1581558225233" duration="627000" />
+      <workItem from="1581563443819" duration="742000" />
+      <workItem from="1581581866953" duration="337000" />
+      <workItem from="1581643457035" duration="924000" />
+      <workItem from="1581645354981" duration="605000" />
+      <workItem from="1581647969988" duration="1114000" />
+      <workItem from="1581649667024" duration="975000" />
+      <workItem from="1581651612242" duration="1474000" />
+      <workItem from="1581653454452" duration="943000" />
+      <workItem from="1581658255953" duration="969000" />
+      <workItem from="1581669172397" duration="697000" />
+      <workItem from="1581691281384" duration="515000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="193" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582040842032">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state x="458" y="193" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.833@0.23.1440.833" timestamp="1582040842032" />
+    <state width="1440" height="222" key="GridCell.Tab.0.bottom" timestamp="1582343873618">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state width="1440" height="222" key="GridCell.Tab.0.bottom/0.23.1440.833@0.23.1440.833" timestamp="1582343873618" />
+    <state width="1440" height="222" key="GridCell.Tab.0.center" timestamp="1582343873618">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state width="1440" height="222" key="GridCell.Tab.0.center/0.23.1440.833@0.23.1440.833" timestamp="1582343873618" />
+    <state width="1440" height="222" key="GridCell.Tab.0.left" timestamp="1582343873617">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state width="1440" height="222" key="GridCell.Tab.0.left/0.23.1440.833@0.23.1440.833" timestamp="1582343873617" />
+    <state width="1440" height="222" key="GridCell.Tab.0.right" timestamp="1582343873618">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state width="1440" height="222" key="GridCell.Tab.0.right/0.23.1440.833@0.23.1440.833" timestamp="1582343873618" />
+    <state x="229" y="78" key="SettingsEditor" timestamp="1581484392228">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state x="229" y="78" key="SettingsEditor/1440.-112.1920.1057/0.23.1440.833@0.23.1440.833" timestamp="1581484392228" />
+    <state x="385" y="90" width="670" height="158" key="search.everywhere.popup" timestamp="1582041395946">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state x="385" y="90" width="670" height="158" key="search.everywhere.popup/0.23.1440.833@0.23.1440.833" timestamp="1582041395946" />
+  </component>
+</project>
