@@ -33,5 +33,6 @@ app.set("view engine", "ejs")
 //set route with web or api
 //app.use("/api", require("../routers/api"))
 app.use("/", require("../routers/web"))
+app.use("/upload", require("../routers/manager_router"))
 
 module.exports = app

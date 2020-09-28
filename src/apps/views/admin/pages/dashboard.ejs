@@ -1,5 +1,13 @@
 <!doctype html>
 <html lang="en">
+<header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src='/admin/js/camera.js'></script>
+    <script src='/admin/js/modal.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link type='text/css' rel='stylesheet' href='/admin/css/camera.css'/>
+    <link type='text/css' rel='stylesheet' href='/admin/css/modal.css'/>
+</header>
 
 <%- include("../layout/head",{title:"Dashboard"}) %>
 
@@ -14,42 +22,54 @@
                     <div class="content">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-12">
                                     <div class="card">
+                                        <h1>Face Registration Form</h1>
+                                        <form action='/process_form' id='student_form' method='POST'>
+                                              <table>
+                                                    <tr>
+                                                        <td>
+                                                        <label for='code'>Student ID</label>
+                                                        <input type='text' id='student_id' class='form-control'/>
+                                                          </td>
+                                                    </tr>
 
-                                        <div class="header">
-                                            <h4 class="title">Email Statistics</h4>
-                                            <p class="category">Last Campaign Performance</p>
+                                                    <tr>
+                                                          <td>
+                                                                <label for='name'>Student name</label>
+                                                                <input type='text' id='student_name' class='form-control'/>
+                                                          </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                          <td>
+                                                                <button type='button' id="myBtn" class='btn btn-primary'>Snap Photo</button>
+                                                                <button type='button' id='submit' class='btn btn-primary'>Submit</button>
+                                                          </td>
+                                                    </tr>
+                                              </table>
+                                                    
+                                                    <div id='snaped-photo-region'>
+                                                        
+                                                    </div>
+                                        </form>
+
+                                        <!-- The Modal -->
+                                        <div id="myModal" class="modal">
+                                            <!-- Modal content -->
+                                            <div class="modal-content" id='modal-content'>
+                                                <span class="close">&times;</span>
+                                                    
+                                                <div id='video_region'>
+                                                    <video hidden id="video" width=640 height=480  autoplay=""></video>
+                                                    <canvas id="canvas" width=640 height=480></canvas>
+                                                </div>
+
+                                                <button type='button' id='snap' class='btn btn-primary'>Snap Photo</button>
+                                                <p id="info"></p>
                                         </div>
-                                        <div class="content">
-                                            <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-
-                                            <div class="footer">
-                                                <div class="legend">
-                                                    <i class="fa fa-circle text-info"></i> Open
-                                                    <i class="fa fa-circle text-danger"></i> Bounce
-                                                    <i class="fa fa-circle text-warning"></i> Unsubscribe
-                                                </div>
-                                                <hr>
-                                                <div class="stats">
-                                                    <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <div class="card">
-                                        <div class="header">
-                                            <h4 class="title">Users Behavior</h4>
-                                            <p class="category">24 Hours performance</p>
-                                        </div>
-                                        <div class="content">
-                                            <video id="vid" autoplay></video>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

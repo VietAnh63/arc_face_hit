@@ -1,0 +1,54 @@
+.card {
+	padding : 8px;
+}
+
+#student_form {
+	display: inline-block;
+	width : 100%;
+	padding : 12px;
+}
+
+#student_form table {
+	width : 80%;
+}
+
+#student_form label {
+	margin-bottom : 12px;
+}
+
+#student_form input {
+	width : 100%;
+	margin-bottom : 12px;
+}
+
+#student_form button {
+	margin : 12px;	
+}
+
+#student_form button:first-child {
+	margin-left : 0;
+}
+
+#student_form button:hover, #myModal button:hover{
+	background-color : #3472F7;
+	color : white;
+}
+#student_form button:focus, #myModal button:focus{
+	background-color : #3472F7;
+	color : white;
+}
+
+#snaped-photo-region {
+	width : 100%;
+}
+
+#video_region {
+	width : 100%;
+	height : auto;
+	display: block;
+}
+
+#canvas {
+	width : 100%;
+}
+
