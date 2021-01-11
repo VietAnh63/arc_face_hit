@@ -1,41 +1,33 @@
-const mongoose = require("mongoose")
-const Admin = mongoose.model("Admin")
-    // const Category = mongoose.model("Category")
-module.exports.login = function(req, res) {
-    // Category.find().exec((err, data)=>{
-    //      console.log(data);
+const Api = require("../../../routers/api");
 
-    // })
-    res.render("admin/pages/login", { error: "" })
-}
+module.exports.login = function (req, res) {
+  res.render("admin/pages/login", { error: "" });
+};
 
-module.exports.postLogin = async function(req, res) {
-    const email = req.body.mail
-    const pass = req.body.pass
+module.exports.postLogin = async function (req, res) {
+  const user_name = req.body.mail;
+  const user_pass = req.body.pass;
+  const params = { user_name, user_pass };
+  const result = await Api.checkLogin(params);
+  const status = result.data.ret_code;
 
-    const admin = await Admin.findOne({ admin_mail: email })
-        //console.log(email)
-    let error
+  let error;
 
-    if (!admin) {
-        error = "Tai khoan khong hop le"
-    }
-
-    if (!error && admin.admin_pass !== pass) {
-        error = "Mat khau khong hop le"
-    }
-
+  if (status === "E1") {
+    error = "Tài khoản mật khẩu không hợp lệ";
+  } else if (status === "E0") {
     if (!error) {
-        req.session.admin = admin
-            //console.log(req.session.user)
-        return res.redirect("/")
+      req.session.admin = params;
     }
-    res.render("admin/pages/login", {
-        error
-    })
-
-}
-module.exports.logout = function(req, res) {
-    req.session.destroy()
-    res.redirect("/login")
-}
+    return res.redirect("/");
+  } else {
+    error = "Lỗi hệ thống";
+  }
+  res.render("admin/pages/login", {
+    error,
+  });
+};
+module.exports.logout = function (req, res) {
+  req.session.destroy();
+  res.redirect("/login");
+};

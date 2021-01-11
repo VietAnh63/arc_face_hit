@@ -3,71 +3,77 @@
 
 <%- include("../layout/head",{title:"Hệ thống giám sát và điểm danh"}) %>
 
-    <body>
+<body>
 
-        <div class="wrapper">
-            <div class="sidebar" data-color="purple" data-image="img/sidebar-5.jpg">
-                <%- include("../layout/sidebar")%>
-            </div>
-            <div class="main-panel">
-                <%- include("../layout/header")%>
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="img/sidebar-5.jpg">
+            <%- include("../layout/sidebar")%>
+        </div>
+        <div class="main-panel">
+            <%- include("../layout/header")%>
 
-                    <div class="content">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <div class="header">
-                                            <h4 class="title">Danh sách thông tin thành viên làm việc</h4>
-                                            <p class="category">Quản lý thành viên ra vào phòng Lab HPC</p>
-                                        </div>
-                                        <div class="content table-responsive table-full-width">
-                                            <table class="table table-hover table-striped">
-                                                <thead>
-                                                    <th>ID</th>
-                                                    <th>Họ tên</th>
-                                                    <th>Email</th>
-                                                    <th>Chức vụ</th>
-                                                    <th>Thời gian vào</th>
-                                                    <th>Thời gian ra</th>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><span class="label label-default">1</span></td>
-                                                        <td><span class="label label-primary">Nguyễn Chiến Thắng</span></td>
-                                                        <td><span class="label label-info">thangnch@gmail.com</span></td>
-                                                        <td><span class="label label-success">Sinh viên</span></td>
-                                                        <td><span class="label label-warning">7:00 am</span></td>
-                                                        <td><span class="label label-warning">9:00 am</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><span class="label label-default">2</span></td>
-                                                        <td><span class="label label-primary">Phạm Việt Anh</span></td>
-                                                        <td><span class="label label-info">vietanh.hn.4078@gmail.com</span></td>
-                                                        <td><span class="label label-success">Nghiên cứu viên</span></td>
-                                                        <td><span class="label label-warning">7:30 am</span></td>
-                                                        <td><span class="label label-warning">10:00 am</span></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Danh sách thông tin quản trị viên</h4>
+                                    <p class="category">Quản lý phòng lab HPC</p>
+                                </div>
+                                <div class="content table-responsive table-full-width">
+                                    <table class="table table-hover table-striped">
+                                        <thead>
+                                            <th>ID</th>
+                                            <th>Tên đăng nhập</th>
+                                            <th>Email</th>
+                                            <th>Level</th>
+                                            <th>Trạng thái</th>
 
-                                        </div>
-                                    </div>
+                                        </thead>
+                                        <tbody>
+                                            <% listUser.forEach((user, index)=>{ %>
+                                            <tr>
+                                                <td><span class="label label-default"><%=user.user_id%></span></td>
+                                                <td><span class="label label-primary"><%=user.user_name%></span></td>
+                                                <td><span class="label label-primary"><%=user.user_email%></span></td>
+                                                <td>
+                                                    <% if(user.user_admin === 1) { %>
+                                                    <span class="label label-success">Admin</span>
+                                                    <%} else {%>
+                                                    <span class="label label-primary">Mod</span>
+                                                    <%}%>
+                                            </td>
+                                            <td>
+                                                <% if(user.user_status === 1) { %>
+                                                    <span class="label label-success">Đang hoạt động</span>
+                                                    <%} else {%>
+                                                    <span class="label label-primary">Không hoạt động</span>
+                                                    <%}%>
+                                            </td>
+                                        </tr>
+                                            <%})%>
+
+                                        </tbody>
+                                    </table>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
-                    <footer class="footer">
-                        <%-include("../layout/footer")%>
-                    </footer>
-
+                </div>
             </div>
-        </div>
-    </body>
 
-    <%-include("../layout/footer_js")%>
+
+
+            <footer class="footer">
+                <%-include("../layout/footer")%>
+            </footer>
+
+        </div>
+    </div>
+</body>
+
+<%-include("../layout/footer_js")%>
 
 </html>

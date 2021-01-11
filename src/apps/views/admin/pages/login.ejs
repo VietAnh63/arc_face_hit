@@ -18,11 +18,11 @@
         <div class="account-login">
             <h1>LOGIN ADMIN</h1>
             <% if(error) {%>
-                <h2><span class="label label-danger"><%=error%></span></h2>
-                <%}%>
+            <h2><span class="label label-danger"><%=error%></span></h2>
+            <%}%>
                     <form action="" class="login-form" method="post">
                         <div class="form-group">
-                            <input name="mail" type="email" placeholder="User Name" class="form-control">
+                            <input name="mail" type="text" placeholder="User Name" class="form-control">
                         </div>
                         <div class="form-group">
                             <input type="password" name="pass" placeholder="Password" class="form-control">

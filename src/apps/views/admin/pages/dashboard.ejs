@@ -5,109 +5,100 @@
     <script src='/admin/js/camera.js'></script>
     <script src='/admin/js/modal.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link type='text/css' rel='stylesheet' href='/admin/css/camera.css'/>
-    <link type='text/css' rel='stylesheet' href='/admin/css/modal.css'/>
+    <link type='text/css' rel='stylesheet' href='/admin/css/camera.css' />
+    <link type='text/css' rel='stylesheet' href='/admin/css/modal.css' />
 </header>
 
 <%- include("../layout/head",{title:"Dashboard"}) %>
 
-    <body>
+<body>
 
-        <div class="wrapper">
-            <div class="sidebar" data-color="purple" data-image="img/sidebar-5.jpg">
-                <%- include("../layout/sidebar")%>
-            </div>
-            <div class="main-panel">
-                <%- include("../layout/header")%>
-                    <div class="content">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <h1>Face Registration Form</h1>
-                                        <form action='/process_form' id='student_form' method='POST'>
-                                              <table>
-                                                    <tr>
-                                                        <td>
-                                                        <label for='code'>Student ID</label>
-                                                        <input type='text' id='student_id' class='form-control'/>
-                                                          </td>
-                                                    </tr>
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="img/sidebar-5.jpg">
+            <%- include("../layout/sidebar")%>
+        </div>
+        <div class="main-panel">
+            <%- include("../layout/header")%>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <h1>Face Registration Form</h1>
+                                <form action='/process_form' id='student_form' method='POST'>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label for='code'>Student ID</label>
+                                                <input type='text' id='student_id' class='form-control' />
+                                            </td>
+                                        </tr>
+                                        <!-- 
+                                        <tr>
+                                            <td>
+                                                <label for='name'>Student name</label>
+                                                <input type='text' id='student_name' class='form-control' />
+                                            </td>
+                                        </tr> -->
 
-                                                    <tr>
-                                                          <td>
-                                                                <label for='name'>Student name</label>
-                                                                <input type='text' id='student_name' class='form-control'/>
-                                                          </td>
-                                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <button type='button' id="myBtn" class='btn btn-primary'>Snap
+                                                    Photo</button>
+                                                <button type='button' id='submit'
+                                                    class='btn btn-primary'>Submit</button>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-                                                    <tr>
-                                                          <td>
-                                                                <button type='button' id="myBtn" class='btn btn-primary'>Snap Photo</button>
-                                                                <button type='button' id='submit' class='btn btn-primary'>Submit</button>
-                                                          </td>
-                                                    </tr>
-                                              </table>
-                                                    
-                                                    <div id='snaped-photo-region'>
-                                                        
-                                                    </div>
-                                        </form>
+                                    <div id='snaped-photo-region'>
 
-                                        <!-- The Modal -->
-                                        <div id="myModal" class="modal">
-                                            <!-- Modal content -->
-                                            <div class="modal-content" id='modal-content'>
-                                                <span class="close">&times;</span>
-                                                    
-                                                <div id='video_region'>
-                                                    <video hidden id="video" width=640 height=480  autoplay=""></video>
-                                                    <canvas id="canvas" width=640 height=480></canvas>
-                                                </div>
-
-                                                <button type='button' id='snap' class='btn btn-primary'>Snap Photo</button>
-                                                <p id="info"></p>
-                                        </div>
-                                        </div>
                                     </div>
+                                </form>
+
+                                <!-- The Modal -->
+                                <div id="myModal" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content" id='modal-content'>
+                                        <span class="close">&times;</span>
+
+                                        <div id='video_region'>
+                                            <video hidden id="video" width=640 height=480 autoplay=""></video>
+                                            <canvas id="canvas" width=640 height=480></canvas>
+                                        </div>
+
+                                        <button type='button' id='snap' class='btn btn-primary'>Snap Photo</button>
+                                        <p id="info"></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <footer class="footer">
-                        <%-include("../layout/footer")%>
-                    </footer>
+                <footer class="footer">
+                    <%-include("../layout/footer")%>
+                </footer>
 
             </div>
         </div>
-    </body>
+</body>
 
-    <%-include("../layout/footer_js")%>
+<%-include("../layout/footer_js")%>
 
-        <script type="text/javascript">
-            $(document).ready(function() {
-                demo.initChartist();
-                $.notify({
-                    icon: 'pe-7s-gift',
-                    message: "Bạn vừa đăng nhập vào hệ thống điểm danh sinh viên"
+<script type="text/javascript">
+    $(document).ready(function () {
+        demo.initChartist();
+        $.notify({
+            icon: 'pe-7s-gift',
+            message: "Bạn vừa đăng nhập vào hệ thống điểm danh sinh viên"
 
-                }, {
-                    type: 'info',
-                    timer: 2000
-                });
+        }, {
+            type: 'info',
+            timer: 2000
+        });
 
-            });
-        </script>
-
-        <!-- <script>
-        //     navigator.mediaDevices.getUserMedia({
-        //         video: {
-        //             width: 500,
-        //             height: 400
-        //         }
-        //     }).then(stream => {
-        //         document.getElementById("vid").srcObject = stream
-        //     })
-        // </script> -->
+    });
+</script>
 
 </html>
